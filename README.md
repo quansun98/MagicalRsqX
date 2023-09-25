@@ -128,25 +128,24 @@ Our pre-trained models and corresponding harmonized PCs are available to downloa
 1. Calculate dissimilarity metrics for your target cohort with respect to the provided references.
 Here we use AA cohort as a demonstration.
 
-	all_dist = c()
-	refs = c("BioMe_AA","MESA_AA","JHS","WHI_AA")
-	for(cohort in refs){
-		all_dist = c(all_dist, 
-			pc_dist(ref_pc = paste0("reference/",cohort,"_harm_PC.sscore"),
-				target_pc = "target_harm_PC.sscore", ind_out = F))
-	}
-	names(all_dist) = refs
-	all_dist
-	
-	BioMe_AA     MESA_AA         JHS      WHI_AA 
-	0.018375499 0.005504560 0.003868932 0.004081391	
+		all_dist = c()
+		refs = c("BioMe_AA","MESA_AA","JHS","WHI_AA")
+		for(cohort in refs){
+			all_dist = c(all_dist, 
+				pc_dist(ref_pc = paste0("reference/",cohort,"_harm_PC.sscore"),
+					target_pc = "target_harm_PC.sscore", ind_out = F))
+		}
+		names(all_dist) = refs
+		all_dist
+		#BioMe_AA     MESA_AA         JHS      WHI_AA 
+		#0.018375499 0.005504560 0.003868932 0.004081391	
 
 We can see that the dissimilarity metrics < 0.02 for all the four references, with the smallest reference being JHS.
 Therefore, JHS should be a good reference to go.
 
 2. Download the pre-trained MagicalRsq-X models based on the chosen model.
 
-	wget ftp://yunlianon:anon@rc-ns-ftp.its.unc.edu/MagicalRsqX/models/JHS_v3_common_100k_rep_1
+		wget ftp://yunlianon:anon@rc-ns-ftp.its.unc.edu/MagicalRsqX/models/JHS_v3_common_100k_rep_1
 
 For each training cohort and each variant MAF category, we provided two models trained with either 100k or 500k variants.
 
