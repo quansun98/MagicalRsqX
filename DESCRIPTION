@@ -1,0 +1,15 @@
+Package: MagicalRsqX
+Title: A cross-cohort transferable genotype imputation quality metric
+Version: 0.0.0.9000
+Authors@R: 
+    person("Quan", "Sun", , "quansun@live.unc.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-8324-2803"))
+Description: This package is used for calculating MagicalRsqX, a cross-cohort transferable genotype imputation quality metric.
+License: `use_mit_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Depends: xgboost, stringr, parallelMap
+Imports: data.table, dplyr, matrixStats
+Suggests: 
+    testthat (>= 3.0.0), Ckmeans.1d.dp
