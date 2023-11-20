@@ -123,7 +123,7 @@ If not specified, it will train one model with all (or randomly subsetted if spe
 We developed a distance metric based on the harmonized PCs to quantify how well a reference can represent a target cohort.
 Please calculate harmonized PCs first following the COVID-19 HGI instructions [here](<https://github.com/covid19-hg/pca_projection/blob/master/docs/prerequisites.md>).
 
-Our pre-trained models and corresponding harmonized PCs are available to download [here]()
+Our [pre-trained models](https://github.com/quansun98/MagicalRsqX/tree/master/models) and corresponding [harmonized PCs](https://github.com/quansun98/MagicalRsqX/tree/master/harmPC) are also available to download.
 
 1. Calculate dissimilarity metrics for your target cohort with respect to the provided references.
 Here we use AA cohort as a demonstration.
